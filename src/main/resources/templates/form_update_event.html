@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head th:include="general/general::head">
+</head>
+<body>
+<nav th:replace="general/general::menu"></nav>
+<form th:action="@{/admin/update}" th:object="${event}" method="post" class="form_event" f>
+    <input type="hidden" th:field="*{id}">
+    <label for="titre">Titre</label>
+    <input type="text" name="titre" th:field="*{titre}" th:value="*{titre}">
+    <label for="description">Descrpition</label>
+    <textarea type="text" name="description" th:field="*{description}" th:value="*{description}"></textarea>
+    <label for="capacite">Capacite</label>
+    <input type="text" name="capacite" th:field="*{capacite}" th:value="*{capacite}">
+    <label for="lieu">Lieu</label>
+    <input type="text" name="lieu" th:field="*{lieu}" th:value="*{lieu}">
+    <label for="prix">Prix</label>
+    <input type="number" name="prix" th:field="*{prix}" th:value="*{prix}">
+    <label for="date">Date</label>
+    <input type="date" name="date" th:value="*{date}" th:field="*{date}">
+    <ul name="wilder" id="wilder-event" style="display: flex; justify-content: space-around; list-style: none">
+        <li  th:each="wilder : ${wilders}">
+            <input type="checkbox" th:text="${wilder.nom}" th:value="${wilder.id}" th:field="*{wilders}">
+        </li>
+    </ul>
+    <input type="submit" value="Modifier">
+</form>
+<footer th:replace="general/general::footer"></footer>
+
+</body>
+</html>

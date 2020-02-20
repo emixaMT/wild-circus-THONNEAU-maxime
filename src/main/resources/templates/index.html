@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head th:include="general/general::head">
+</head>
+<body onclick="var audio = new Audio('../song.mp3');
+audio.play();">
+<nav th:replace="general/general::menu">
+</nav>
+<div>
+    <div class="ele-container">
+        <div class="ele-wrapper">
+            <div class="ele-tail"></div>
+            <div class="ele-body">
+                <div class="ele-head">
+                    <div class="ele-eyebrows"></div>
+                    <div class="ele-eyes"></div>
+                    <div class="ele-mouth"></div>
+                    <div class="ele-fang-front"></div>
+                    <div class="ele-fang-back"></div>
+                    <div class="ele-ear"></div>
+                </div>
+            </div>
+            <div class="ele-leg-1 ele-leg-back">
+                <div class="ele-foot"></div>
+            </div>
+            <div class="ele-leg-2 ele-leg-front">
+                <div class="ele-foot"></div>
+            </div>
+            <div class="ele-leg-3 ele-leg-back">
+                <div class="ele-foot"></div>
+            </div>
+            <div class="ele-leg-4 ele-leg-front">
+                <div class="ele-foot"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="corps">
+    <h1></i><i class="far fa-dot-circle"></i> Wild Circus <i class="far fa-dot-circle"></i></h1>
+    <p style="width: 90%;margin: auto; margin-bottom: 4rem;">
+        Bienvenues à vous !<br> Le wild circus est là pour vous faire passer de bon moments, en famille.
+        Si vous aimez rire et vous amuser alors n'hésitez surtout pas à reserver votre place pour nos nombreux événements tous plus fou les uns que les autres !
+    </p>
+
+    <h2>Les évènements à venir </h2>
+    <ul class="list_event">
+        <li th:each="event : ${events}" class="event">
+            <img src="http://via.placeholder.com/200" alt="">
+            <div class="corps_event">
+                <h2 th:text="${event.titre}"></h2>
+                <h5 th:text="${event.date}"></h5>
+                <p th:text="|Nombre de place: ${event.capacite}"></p>
+            </div>
+        </li>
+    </ul>
+    <h2 style="text-align: center">Nos wilders :</h2>
+    <div class="slider_wilders">
+        <img th:src="${wilder.photo_url}" alt="" th:each="wilder : ${wilders}" style="
+	height: 160px;
+	width: 160px;
+	object-fit: cover;">
+    </div>
+
+</div>
+
+<footer th:include="general/general::footer"></footer>
+</body>
+</html>

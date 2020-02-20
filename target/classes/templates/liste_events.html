@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head th:include="general/general::head">
+</head>
+<body>
+<nav th:replace="general/general::menu"></nav>
+<h1>Wild Circus</h1>
+<div class="corps_liste_events">
+    <ul>
+        <li th:each="event : ${events}" class="event">
+            <img src="http://via.placeholder.com/200" alt="">
+            <div class="corps_event">
+                <h2 th:text="${event.titre}"></h2>
+                <h5 th:text="${event.date}"></h5>
+                <p th:text="|Nombre de place: ${event.capacite}"></p>
+                <p th:text="${event.description}" style="font-size: 1.5rem"></p>
+            </div>
+            <div class="wilders">
+                <h3>Artistes</h3>
+                <p th:each="wilder : ${event.wilders}" th:text="${wilder.nom}"></p>
+            </div>
+        </li>
+    </ul>
+</div>
+<footer th:replace="general/general::footer"></footer>
+</body>
+</html>

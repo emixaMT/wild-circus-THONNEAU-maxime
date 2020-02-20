@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head th:include="general/general::head">
+</head>
+<body>
+<h1>Wild Circus</h1>
+        <ul>
+            <li th:each="client : ${clients}">
+                <p th:text="${client.nom}"></p>
+            </li>
+        </ul>
+</body>
+</html>

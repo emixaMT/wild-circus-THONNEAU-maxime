@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head th:include="general/general::head">
+</head>
+<body>
+<nav th:replace="general/general::menu"></nav>
+<form th:action="@{/admin/wilder}" enctype="multipart/form-data" th:object="${wilder}" method="post" class="form_event">
+    <label for="nom">Nom</label>
+    <input type="text" name="nom" th:field="*{nom}" placeholder="Nom">
+    <label for="description">Descrpition</label>
+    <textarea type="text" name="description" th:field="*{description}" placeholder="Description"></textarea>
+    <label for="age">Age</label>
+    <input type="text" name="age" th:field="*{age}" placeholder="Age">
+    <br>
+    <input type="file" name="photo" th:field="*{photo}" placeholder="Photo">
+    <ul name="event" id="wilder-event" style="display: flex; justify-content: space-around; list-style: none">
+        <li  th:each="event : ${events}" >
+            <input type="checkbox" th:text="${event.titre}" th:value="${event.id}" th:field="*{events}"></li>
+    </ul>
+    <input type="submit" value="Creer">
+</form>
+<footer th:replace="general/general::footer"></footer>
+
+</body>
+</html>

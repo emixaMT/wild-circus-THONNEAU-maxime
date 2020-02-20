@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head th:include="general/general::head">
+</head>
+<body>
+<nav th:replace="general/general::menu"></nav>
+<h1>Wild Circus</h1>
+<form th:action="@{/order}" th:object="${client}" method="post" class="form_event">
+    <label for="nom">Nom</label>
+    <input type="text" name="nom" th:field="*{nom}" placeholder="Nom">
+    <label for="prenom">Prenom</label>
+    <input type="text" name="prenom" th:field="*{prenom}" placeholder="Prenom">
+
+    <select name="event" id="event" style="margin-top: 2rem;">
+        <option th:each="event : ${events}" th:value="${event.id}" th:text="${event.titre}"></option>
+    </select>
+
+    <input type="submit" value="Creer" style="margin-top: 2rem;">
+</form>
+<footer th:replace="general/general::footer"></footer>
+</body>
+</html>

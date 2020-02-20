@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head th:include="general/general::head">
+</head>
+<body>
+<nav th:replace="general/general::menu"></nav>
+<nav id="create_nav">
+    <a th:href="@{/admin/createWilder}">Créer un wilder</a>
+    <a th:href="@{/admin/createEvent}">Créer un événement</a>
+</nav>
+<div class="corps_liste_events">
+    <ul style="margin-top: 2rem;">
+        <li th:each="event : ${events}" class="event">
+            <img src="http://via.placeholder.com/200" alt="">
+            <div class="corps_event">
+                <h2 th:text="${event.titre}"></h2>
+                <h5 th:text="${event.date}"></h5>
+                <p th:text="|Nombre de place: ${event.capacite}"></p>
+                <p th:text="${event.description}" style="font-size: 1.5rem"></p>
+                <div style="display: flex; flex-direction: row; font-size: 2rem;justify-content: space-around;">
+                    <a th:href="@{/admin/update/event(id=${event.id})}" style="color: var(--main-bg-color);">Modifier</a>
+                    <a th:href="@{/admin/delete/event/{id}(id=${event.id})}" style="color: var(--main-bg-color);">Supprimer</a>
+                </div>
+
+            </div>
+        </li>
+    </ul>
+</div>
+<footer th:replace="general/general::footer"></footer>
+
+</body>
+</html>

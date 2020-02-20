@@ -1,0 +1,15 @@
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/storage/StorageService.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/repository/WilderRepository.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/controller/AdminController.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/config/WildConfig.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/WildCircusApplication.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/storage/FileSystemStorageService.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/storage/StorageFileNotFoundException.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/controller/ClientController.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/repository/EventRepository.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/entity/Client.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/entity/Wilder.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/storage/StorageException.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/entity/Event.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/repository/ClientRepository.java
+/Users/maxime/eclipse-workspace/WildCircus/src/main/java/com/wildcodeschool/WildCircus/storage/StorageProperties.java
